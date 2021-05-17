@@ -16,13 +16,13 @@ class FilmItem extends React.Component {
           <View style={styles.content_container}>
             <View style={styles.header_container}>
               <Text style={styles.title_text}>{film.title}</Text>
-              <Text style={styles.vote_text}>{film.vote_average}</Text>
+              <Text style={styles.duree}> Durée : {film.duree}</Text>
             </View>
             <View style={styles.description_container}>
               <Text style={styles.description_text} numberOfLines={6}>{film.overview}</Text>
             </View>
             <View style={styles.date_container}>
-              <Text style={styles.date_text}>Sorti le {film.release_date}</Text>
+              <Text style={styles.horaire}>Horaires : {film.horaire}</Text>
             </View>
           </View>
         </View>
@@ -33,17 +33,23 @@ class FilmItem extends React.Component {
 const styles = StyleSheet.create({
   main_container: {
     height: 190,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    marginBottom: 10 ,
+    
+
   },
   image: {
-    width: 120,
-    height: 180,
-    margin: 5,
+    width: 130,
+    height: 190,
+    margin: 2,
+    borderColor: '#000000',
+    borderWidth: 2,
     backgroundColor: 'gray'
   },
   content_container: {
     flex: 1,
-    margin: 5
+    margin: 2
+    
   },
   header_container: {
     flex: 3,
@@ -53,27 +59,29 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 20,
     flex: 1,
+    color: '#FFFFFF',
     flexWrap: 'wrap',
     paddingRight: 5
   },
-  vote_text: {
+  duree: {
     fontWeight: 'bold',
-    fontSize: 26,
-    color: '#666666'
+    fontSize: 12,
+    color: '#DED6D6'
   },
   description_container: {
     flex: 7
   },
   description_text: {
     fontStyle: 'italic',
-    color: '#666666'
+    color: '#DED6D6'
   },
   date_container: {
     flex: 1
   },
-  date_text: {
+  horaire: {
     textAlign: 'right',
-    fontSize: 14
+    fontSize: 12,
+    color: '#DED6D6'
   }
 })
 
