@@ -1,9 +1,9 @@
 // Components/FilmItem.js
-
 import React from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
 
 class FilmItem extends React.Component {
+
   render() {
     const film = this.props.film
 
@@ -11,18 +11,18 @@ class FilmItem extends React.Component {
         <View style={styles.main_container}>
           <Image
             style={styles.image}
-            source={{uri:film.poster_path}}
+            source={{uri:film.image}}
           />
           <View style={styles.content_container}>
             <View style={styles.header_container}>
-              <Text style={styles.title_text}>{film.title}</Text>
-              <Text style={styles.duree}> Durée : {film.duree}</Text>
+              <Text style={styles.title_text}>{film.film_Nom}</Text>
+              <Text style={styles.duree}> Durée : {film.film_Durée}</Text>
             </View>
             <View style={styles.description_container}>
-              <Text style={styles.description_text} numberOfLines={6}>{film.overview}</Text>
+              <Text style={styles.description_text} numberOfLines={6}>{film.film_Description}</Text>
             </View>
             <View style={styles.date_container}>
-              <Text style={styles.horaire}>Horaires : {film.horaire}</Text>
+              <Text style={styles.horaire}>Horaires : {film.film_Horraires}</Text>
             </View>
           </View>
         </View>
